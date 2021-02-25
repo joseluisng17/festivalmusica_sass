@@ -1,0 +1,58 @@
+.video{
+    position: relative;
+    // la posicion relativa hace que el elemento se quede dentro de los limites de elemento video, este caso funcionaria
+    // para ayudar al overlay que va tener posicion absoluta por encima del video pero para que no se salga de los limites
+    // del video
+    max-height: 70rem;
+    overflow: hidden;
+    // lo que se hace con overflow es decirle que si el contenido se desborda o se sale del limite que lo contiene 
+    // lo oculte, oculte ese contenido que se desborda, nota: también se le puede poner scroll para que ese contenido
+    // si se desborda se pueda hacer scrool y ver el contenido que ya no se abarco y se desbordo de su contenedor.
+    .overlay{
+        // posisicón absuluta se pone poer ensima y empieza a acomodarse como si fuera por coordenada, por defecto
+        // se coloca en la pa esquina superior derecha
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+67,ffffff+100&0.8+0,0.5+100 */
+        background: -moz-linear-gradient(-45deg,  rgba(137,28,30,0.8) 0%, rgba(158,55,242,0.6) 67%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  rgba(137,28,30,0.8) 0%,rgba(158,55,242,0.6) 67%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  rgba(137,28,30,0.8) 0%,rgba(158,55,242,0.6) 67%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc891c1e', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      
+    }
+
+    video{
+        // al video le damos display block para que tome todo el espacio de lo alto, y aque sin ponerselo no toma todo el alto
+        // y se alcansa a ver una franja inferior del color de fondo
+        display: block;
+        width: 100%;
+    }
+}
+
+.contenido-video{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    // el z-index es para que el elemtno se vaya adelante del overlay. si le pones -1 el elemento se va a poner atras del overlay
+    z-index: 1;
+
+    h2{
+        display: flex;
+        flex-direction: column;
+        // para aliniar los elementos a la izquierda y el color del background de span no abarque todo lo ancho del h2
+        // se usa align-items para dar ese acomodo horizontal por que la dirección de flex se cambio a column, si la dirección
+        // de flex suera en row para darle el acomodo horizontal a los elementos sería justify-content: flex-start
+        align-items: flex-start;
+        color: $blanco;
+        font-size: 7rem;
+
+        span{
+            background-color: $rosa;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+        }
+    }
+}

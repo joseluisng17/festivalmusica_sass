@@ -1,0 +1,28 @@
+{
+  "name": "festivalmusica_sass",
+  "version": "1.0.0",
+  "description": "proyecto ocn gulp y sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "web",
+    "desing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-webp": "^4.0.1"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
+  }
+}
